@@ -3,8 +3,10 @@ package com.drsync.core.data.remote
 import android.util.Log
 import com.drsync.core.data.Resource
 import com.drsync.core.data.remote.network.ApiService
+import com.drsync.core.data.remote.request.CheckListRequest
 import com.drsync.core.data.remote.request.LoginRequest
 import com.drsync.core.data.remote.request.RegisterRequest
+import com.drsync.core.data.remote.response.CheckListResponse
 import com.drsync.core.data.remote.response.ServerResponse
 import com.drsync.core.util.ConstantVariable.LOGIN_OK
 import com.drsync.core.util.ConstantVariable.REGISTER_OK
@@ -39,6 +41,25 @@ class RemoteDataSource @Inject constructor(
         }
     }.catch {
         Log.d(TAG, "registerUser: ${it.message}")
+        emit(Resource.Error(it.message ?: ""))
+    }.flowOn(Dispatchers.IO)
+
+    fun insertCheckList(header: String, request: CheckListRequest) =
+        flow {
+            emit(Resource.Loading())
+            val response = apiService.insertCheckList(header, request)
+            emit(Resource.Success(response))
+        }.catch {
+            Log.d(TAG, "insertCheckList: ${it.message}")
+            emit(Resource.Error(it.message ?: ""))
+        }.flowOn(Dispatchers.IO)
+
+    fun getCheckList(header: String) = flow {
+        emit(Resource.Loading())
+        val response = apiService.getCheckList(header)
+        emit(Resource.Success(response))
+    }.catch {
+        Log.d(TAG, "getCheckList: ${it.message}")
         emit(Resource.Error(it.message ?: ""))
     }.flowOn(Dispatchers.IO)
 }
