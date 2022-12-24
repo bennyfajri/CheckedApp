@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.CheckedApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.CheckedApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -12,5 +12,123 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+    </style>
+    <style name="inputLayoutTheme" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="hintEnabled">false</item>
+        <item name="boxCornerRadiusBottomEnd">5dp</item>
+        <item name="boxCornerRadiusBottomStart">5dp</item>
+        <item name="boxCornerRadiusTopEnd">5dp</item>
+        <item name="boxCornerRadiusTopStart">5dp</item>
+    </style>
+
+    <style name="inputLayoutSpinner" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="boxCornerRadiusBottomEnd">8dp</item>
+        <item name="boxCornerRadiusBottomStart">8dp</item>
+        <item name="boxCornerRadiusTopEnd">8dp</item>
+        <item name="boxCornerRadiusTopStart">8dp</item>
+    </style>
+
+    <style name="inputEditText" parent="text_regular12">
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="text_size">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!--    text Regular-->
+    <style name="text_regular10" parent="text_size">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="text_regular12" parent="text_regular10">
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="text_regular14" parent="text_regular10">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="text_regular16" parent="text_regular10">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="text_regular18" parent="text_regular10">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="text_regular20" parent="text_regular10">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <!--    Text semi bold-->
+    <style name="text_semi_bold10" parent="text_size">
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="text_semi_bold12" parent="text_semi_bold10">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="text_semi_bold14" parent="text_semi_bold10">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="text_semi_bold16" parent="text_semi_bold10">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="text_semi_bold18" parent="text_semi_bold10">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="text_semi_bold20" parent="text_semi_bold10">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <!--    text bold-->
+    <style name="text_bold10" parent="text_size">
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="text_bold12" parent="text_bold10">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="text_bold14" parent="text_bold10">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="text_bold16" parent="text_bold10">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="text_bold18" parent="text_bold10">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="text_bold20" parent="text_bold10">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="text_bold24" parent="text_bold10">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="normalButton" parent="text_semi_bold14">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="cornerRadius">8dp</item>
     </style>
 </resources>
